@@ -5,10 +5,10 @@ describe User do
 
 
 
-	# subject(:user) {User.create(username:"")}
+	subject(:user) {User.create(username:"")}
 
-	# it { is_expected.to respond_to :username}
-	
+	it { is_expected.to respond_to :username}
+	it { is_expected.to have_many :posts}
 
 	it 'should have' do
 		user = User.create
@@ -35,4 +35,6 @@ describe User do
 			expect(valid_user).to be_valid
 		end
 	end
+
+	
 end
