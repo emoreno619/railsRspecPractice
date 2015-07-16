@@ -1,12 +1,25 @@
 require 'rails_helper'
 
 describe User do
+	# Refactoring in comments
+
+
+
+	# subject(:user) {User.create(username:"")}
+
+	# it { is_expected.to respond_to :username}
+	
+
 	it 'should have' do
 		user = User.create
 		expect(user).to respond_to :username
 	end
 
 	describe 'username' do
+		
+		# subject(:invalid_user) {User.create(username:"", email:"blah@example.com")}
+		# it { is_expected.to_not be_valid }
+
 		it 'cannot be blank' do
 			invalid_user = User.create(username:"")
 
